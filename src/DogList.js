@@ -4,7 +4,7 @@ import './DogList.css';
 
 const DogList = (props) => {
     
-    const dogsArray = props.doggos.map((doggoURL) => {
+    const dogsArray = props.doggos.slice(0, 8).map((doggoURL) => {
         return <Dog url={doggoURL}/>
     })
     return (

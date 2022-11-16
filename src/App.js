@@ -50,10 +50,17 @@ class App extends React.Component {
 
   componentDidMount() {
     this.fetchData();
+    if (this.state.dogs.length < 8) {
+      this.fetchData();
+    }
   }
 
   newDoggoButton() {
-    return <button onClick={() => this.fetchData()}>Get 8 New Doggos</button>;
+    return <button onClick={() => {this.fetchData();
+      if (this.state.dogs.length < 8) {
+        this.fetchData();
+      }
+    }}>Get 8 New Doggos</button>;
   }
 
   render() {
