@@ -2,7 +2,6 @@ import './App.css';
 import React from 'react';
 import axios from 'axios';
 import DogList from './DogList';
-import Dog from './Dog';
 
 class App extends React.Component {
   constructor(props) {
