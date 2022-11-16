@@ -13,45 +13,6 @@ class App extends React.Component {
     };
   }
 
-  // GetDogMedia(props) {
-  //   const index = props.index;
-  //   const type = props.type[index];
-  //   const url = props.url[index];
-  //   if (type === ".mp4") {
-  //     return (
-  //       <video
-  //         className="dogMedia"
-  //         autoPlay={true}
-  //         loop
-  //         muted={true}
-  //         key={url}
-  //         controls
-  //       >
-  //         <source src={url} type="video/mp4" />
-  //       </video>
-  //     );
-  //   } else if (type === "webm") {
-  //     return (
-  //       <video
-  //         className="dogMedia"
-  //         autoPlay={true}
-  //         loop
-  //         muted={true}
-  //         key={url}
-  //         controls
-  //       >
-  //         <source src={url} type="video/webm" />
-  //       </video>
-  //     );
-  //   } else if (type === null) {
-  //     return <p />;
-  //   } else {
-  //     return (
-  //       <img className="dogMedia" src={url} key={url} alt="Broken Dog Link" />
-  //     );
-  //   }
-  // }
-
   fetchData = () => {
     this.setState({
       dogs: [],
@@ -102,9 +63,6 @@ class App extends React.Component {
           <h1 className="App-title">GET YOUR DOGGOS RIGHT HERE FRESH OUT THE BOX</h1>
           {this.newDoggoButton()}
         </header>
-        {/* <div className="dogContainer">
-          <this.GetDogMedia url={this.state.dogs} type={this.state.types} index={0}/>    
-        </div> */}
         <DogList doggos={this.state.dogs}/>
       </div>
     );
