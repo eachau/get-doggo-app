@@ -1,70 +1,17 @@
-# Getting Started with Create React App
+# A React App to Get Good Doggos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An App created using React made to fetch 8 random files of dogs on demand, which can be accessed at any time [here.](https://eachau.github.io/get-doggo-app)
 
-## Available Scripts
+To refresh, simply click the button and behold your new good boys. 
 
-In the project directory, you can run:
+## Assumptions and Liberties Taken
 
-### `npm start`
+I should point out that this is my first *ever* foray with *HTML*, *JavaScript* and *React* as a whole, including associated managers such as *Node*. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+As such, there are several liberties within the code with regards to the given specifications, in lieu of having had only two and a half days to familiarise myself with the above.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- The app can only parse dogs of common file types `.jpg`, `.jpeg`, `.png`, `.gif`, `.mp4`, and `.webm`. All other dogs of more rare, esoteric file types are skipped entirely.   
+    - **NOTE:** Within the code, should fewer than 8 dogs be fetched on the first pass due to a skipped file type, a second pass will be made, fetching up to an additional 8 dogs (only the first 8 dogs total will be displayed), and no further. The core assumption is made that the skipped file types will be rare enough that two passes will always be enough to obtain 8 displayable dogs. 
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- The specifications ask for a responsive display accounting for desktop and mobile screens. Due to difficulty and inexperience with the platform, only a temporary indirect measure was implemented, utilizing hardcoded widths to accommodate the required number of dogs per "row".
+    - The assumption is made that 250px per dog is enough to accommodate 4 dogs per row on a regular desktop screen. Furthermore, 150px per dog is assumed enough for a single dog on a regular mobile screen (assuming a vertical screen).
